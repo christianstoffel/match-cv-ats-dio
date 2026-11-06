@@ -63,6 +63,8 @@ function Index() {
     inFlight.current = true;
     setLoading(true);
     setFailure(null);
+    setResult(null);
+    setEdited("");
     try {
       const res = await analyze({ data: { job, resume } });
       if (!res.ok) { setFailure(res.message); return; }
