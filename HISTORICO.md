@@ -1,29 +1,93 @@
-# Histórico de implementação e ajustes
+# Histórico de Desenvolvimento — MatchCV ATS
 
-## Versão inicial — Megaprompt único
+## 1. Planejamento
 
-A especificação inicial solicitou a construção do MVP completo no Lovable, sem login ou banco de dados, com design system shadcn/ui, análise por IA, currículo editável e exportação para PDF.
+O projeto MatchCV ATS foi desenvolvido como parte do Bootcamp DIO — Vibe Coding, utilizando o Lovable para construir uma aplicação web de análise e otimização de currículos.
 
-O objetivo foi reduzir iterações e o uso de créditos do plano gratuito, concentrando o trabalho em um fluxo completo de ponta a ponta.
+O desafio consistia em desenvolver uma ferramenta capaz de comparar um currículo com uma descrição de vaga, apresentar uma estimativa de compatibilidade e gerar uma versão do currículo mais adequada à leitura por sistemas ATS.
 
-O texto integral está em [`MEGAPROMPT.md`](MEGAPROMPT.md).
+A estratégia adotada foi elaborar um megaprompt detalhado antes de iniciar a implementação, buscando reduzir a necessidade de interações adicionais com o Lovable e otimizar o consumo de créditos da conta gratuita.
 
-## Validação funcional
+## 2. Definição do escopo
 
-A aplicação foi testada com uma vaga fictícia de Desenvolvedor(a) Full Stack .NET Pleno e dois currículos fictícios de perfis diferentes. O teste foi relatado como bem-sucedido.
+Foram priorizadas as funcionalidades essenciais:
 
-Os casos de teste estão registrados em [`TESTES.md`](TESTES.md).
+- Inserção da descrição da vaga e do currículo por texto.
+- Análise de compatibilidade utilizando inteligência artificial.
+- Identificação de competências e requisitos comprovados ou ausentes.
+- Geração de recomendações de melhoria.
+- Criação de uma versão otimizada do currículo.
+- Edição manual do conteúdo gerado.
+- Exportação do currículo em PDF.
 
-## Ajustes após a primeira geração
+A primeira versão foi planejada sem autenticação, banco de dados ou histórico de análises, evitando complexidade desnecessária.
 
-**Não há ajustes posteriores informados até o momento.** Não registrar correções fictícias. Se houve algum pedido adicional no Lovable, adicionar aqui:
+## 3. Elaboração do megaprompt
 
-| Etapa | Solicitação feita ao Lovable | Motivo | Resultado |
-| --- | --- | --- | --- |
-| A preencher, se aplicável | — | — | — |
+O megaprompt foi preparado em Markdown, especificando:
 
-Caso a versão inicial tenha atendido integralmente aos requisitos, declarar no README e aqui: *"Não foram necessários prompts corretivos após a primeira geração; os testes funcionais foram concluídos com sucesso."*
+- Objetivos e regras de negócio.
+- Tecnologias e arquitetura.
+- Design system shadcn/ui e identidade visual.
+- Estrutura da interface.
+- Processamento com inteligência artificial.
+- Cálculo indicativo de compatibilidade.
+- Regras para impedir a criação de informações fictícias.
+- Edição e exportação em PDF.
+- Estados de carregamento, sucesso e erro.
+- Critérios de aceitação.
 
-## Publicação
+A especificação completa está disponível em [MEGAPROMPT.md](MEGAPROMPT.md).
 
-Aplicação publicada em https://match-cv-ats-dio.lovable.app. A página pública foi acessada em 06/11/2026.
+## 4. Implementação no Lovable
+
+A aplicação foi gerada utilizando o Lovable, com foco no desenvolvimento do fluxo principal em uma primeira implementação.
+
+Uma decisão importante foi concentrar a análise da vaga e a geração do currículo otimizado em uma única operação de inteligência artificial, buscando evitar chamadas desnecessárias.
+
+Também foi priorizada uma interface acessível sem cadastro, permitindo que o usuário utilize a ferramenta imediatamente.
+
+## 5. Testes e validação
+
+Após a geração da aplicação, foram preparados três conjuntos de dados fictícios:
+
+- Uma vaga de Desenvolvedor(a) Full Stack .NET Pleno.
+- Um currículo com experiência diretamente relacionada à vaga.
+- Um currículo com experiência em desenvolvimento web, mas utilizando tecnologias diferentes.
+
+O objetivo foi verificar se a aplicação conseguiria reconhecer diferentes níveis de compatibilidade e preservar as informações verdadeiras de cada candidato durante a otimização.
+
+A aplicação apresentou funcionamento satisfatório nos testes realizados.
+
+Os cenários estão documentados em [TESTES.md](TESTES.md).
+
+## 6. Ajustes e decisões
+
+Durante o planejamento, foram tomadas decisões para manter o MVP simples e funcional:
+
+| Decisão | Justificativa |
+|---|---|
+| Não implementar login | Eliminar etapas desnecessárias para o usuário |
+| Não implementar banco de dados | Evitar complexidade e armazenamento de informações pessoais |
+| Utilizar IA para análise semântica | Permitir identificação de competências além da correspondência literal |
+| Permitir edição manual | Garantir controle do usuário sobre o currículo final |
+| Exportar em PDF | Disponibilizar um documento pronto para utilização |
+| Priorizar uma chamada de IA por análise | Reduzir processamento e consumo de créditos |
+
+Não foram identificadas, nos testes relatados, falhas que exigissem alterações substanciais no fluxo principal após a geração inicial.
+
+As alterações posteriores de documentação e organização do repositório foram realizadas para atender aos requisitos de entrega do desafio.
+
+## 7. Publicação
+
+A aplicação foi publicada no Lovable e disponibilizada para acesso público.
+
+**Aplicação:** https://match-cv-ats-dio.lovable.app
+
+**Repositório:** https://github.com/christianstoffel/match-cv-ats-dio
+
+## 8. Considerações finais
+
+O desenvolvimento demonstrou como um megaprompt bem estruturado pode orientar a construção de um MVP funcional, com menor necessidade de refinamentos posteriores.
+
+O projeto também reforçou a importância de validar resultados produzidos por inteligência artificial, especialmente em aplicações que trabalham com informações profissionais e decisões relacionadas ao recrutamento.
