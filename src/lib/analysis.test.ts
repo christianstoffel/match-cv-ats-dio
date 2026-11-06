@@ -16,7 +16,7 @@ describe("score", () => {
   });
   it("matched without evidence counts as not proven", () => {
     const n = normalizeRequirements([r("required", true, null, "React")]);
-    expect(n[0].matched).toBe(false);
+    expect(n[0]?.matched).toBe(false);
     expect(computeScore(n)).toBe(0);
   });
   it("dedupes keywords", () => {
