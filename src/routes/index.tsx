@@ -216,7 +216,7 @@ function Index() {
   );
 }
 
-function Field(p: { id: string; label: string; value: string; onChange: (v: string) => void; max: number; error?: string; placeholder: string; disabled: boolean }) {
+function Field(p: { id: string; label: string; value: string; onChange: (v: string) => void; max: number; error?: string | undefined; placeholder: string; disabled: boolean }) {
   const len = p.value.length;
   return (
     <div className="space-y-2">
