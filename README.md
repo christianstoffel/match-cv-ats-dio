@@ -75,7 +75,31 @@ Os cenários utilizados estão documentados em [TESTES.md](TESTES.md).
 
 ## Capturas de tela
 
-As capturas de tela da aplicação serão adicionadas nesta seção, demonstrando o formulário, os resultados da análise e o currículo otimizado.
+As imagens abaixo demonstram o fluxo de utilização do MatchCV ATS, desde a apresentação inicial até a geração do currículo otimizado.
+
+### 1. Página inicial
+
+![Página inicial do MatchCV ATS](screenshots/01-home.png)
+
+### 2. Formulário de análise
+
+![Formulário para inserir a vaga e o currículo](screenshots/02-formulario.png)
+
+### 3. Resultado da análise
+
+![Resultado da análise de compatibilidade](screenshots/03-analise.png)
+
+### 4. Requisitos e competências
+
+![Identificação de requisitos e competências](screenshots/04-requisitos.png)
+
+### 5. Recomendações de melhoria
+
+![Recomendações para otimização do currículo](screenshots/05-recomendacoes.png)
+
+### 6. Currículo otimizado
+
+![Currículo ATS friendly gerado pela aplicação](screenshots/06-curriculo-otimizado.png)
 
 ## Limitações e evolução futura
 
